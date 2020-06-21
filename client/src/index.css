@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --header-height: 4rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

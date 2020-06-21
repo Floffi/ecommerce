@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: var(--header-height);
+  border-top: 1px solid grey;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.copyright__text {
+  margin-left: 0.2rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.social__link {
+  display: flex;
+  color: black;
+  font-size: 2rem;
+}

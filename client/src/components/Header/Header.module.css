@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0 2rem;
+  min-height: var(--header-height);
+  background: white;
+  z-index: 3;
+  border-bottom: 1px solid grey;
+}
