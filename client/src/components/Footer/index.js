@@ -14,6 +14,7 @@ const Footer = (props) => {
         <a
           href='https://www.twitter.com'
           target='_blank'
+          rel='noopener noreferrer'
           className={styles.social__link}
         >
           <FaTwitter />
@@ -21,6 +22,7 @@ const Footer = (props) => {
         <a
           href='https://www.instagram.com'
           target='_blank'
+          rel='noopener noreferrer'
           className={styles.social__link}
         >
           <FaInstagram />
@@ -28,6 +30,7 @@ const Footer = (props) => {
         <a
           href='https://www.youtube.com'
           target='_blank'
+          rel='noopener noreferrer'
           className={styles.social__link}
         >
           <FaYoutube />

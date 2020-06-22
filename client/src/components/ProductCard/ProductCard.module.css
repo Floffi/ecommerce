@@ -1,7 +1,6 @@
 .product__card {
   display: flex;
   flex-direction: column;
-  width: 20vw;
   color: black;
   text-decoration: none;
 }
