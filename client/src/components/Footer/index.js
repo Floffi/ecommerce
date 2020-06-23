@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FaCopyright, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>

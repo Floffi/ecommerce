@@ -24,9 +24,15 @@
 
 .icon {
   font-size: 2rem;
+  color: black;
+}
+
+.logo__link {
+  display: flex;
 }
 
 .nav__link {
+  display: flex;
   font-weight: 700;
   color: black;
   text-decoration: none;
