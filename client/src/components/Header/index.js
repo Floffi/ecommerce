@@ -11,7 +11,12 @@ const Header = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   const nav = isAuthenticated ? (
-    <Button onClick={() => dispatch(logout())}>Logout</Button>
+    <>
+      <NavLink to='/dashboard' className={styles.nav__link}>
+        Dashboard
+      </NavLink>
+      <Button onClick={() => dispatch(logout())}>Logout</Button>
+    </>
   ) : (
     <>
       {' '}

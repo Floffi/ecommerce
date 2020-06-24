@@ -20,9 +20,18 @@ const login = yup.object().shape({
   password: yup.string().required('Password is required'),
 });
 
+const category = yup.object().shape({
+  name: yup
+    .string()
+    .required('Name is required')
+    .min(2, 'Name must be at least 2 characters')
+    .max(20, 'Name must be at most 20 characters'),
+});
+
 const schemas = {
   register,
   login,
+  category,
 };
 
 export default schemas;

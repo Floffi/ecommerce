@@ -14,9 +14,14 @@ const login = joi.object({
   password: joi.string().required().min(6).max(32),
 });
 
+const category = joi.object({
+  name: joi.string().required('Name is required').min(2).max(20),
+});
+
 exports.schemas = {
   register,
   login,
+  category,
 };
 
 exports.validate = (schema, prop) => (req, res, next) => {
@@ -26,6 +31,7 @@ exports.validate = (schema, prop) => (req, res, next) => {
       acc[curr.path[0]] = curr.message;
       return acc;
     }, {});
+    console.log(err);
     return res.status(422).json({
       status: 'failure',
       error: err,

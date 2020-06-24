@@ -12,6 +12,7 @@ import Product from '../../routes/Product';
 import Register from '../../routes/Register';
 import Login from '../../routes/Login';
 import AuthRoute from '../AuthRoute';
+import Dashboard from '../../routes/Dashboard';
 import { loadSession } from '../../redux/auth';
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
           <Route path='/shop' component={Shop} />
           <Route path='/cart' component={Cart} />
           <Route path='/product/:productId' component={Product} />
+          <Route path='/dashboard/:section?' component={Dashboard} />
           <AuthRoute path='/register' component={Register} />
           <AuthRoute path='/login' component={Login} />
         </Switch>
