@@ -4,7 +4,8 @@
   justify-content: space-between;
   padding: 0 2rem;
   min-height: var(--header-height);
-  border-top: 1px solid grey;
+  background: black;
+  color: white;
 }
 
 .copyright {
@@ -28,6 +29,10 @@
 
 .social__link {
   display: flex;
-  color: black;
+  color: white;
   font-size: 2rem;
+}
+
+.social__link:hover {
+  color: grey;
 }

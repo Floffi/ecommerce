@@ -1,0 +1,41 @@
+.table {
+  overflow: scroll;
+  max-height: 50vh;
+  width: 80vw;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: black;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: grey;
+}
+
+.button {
+  display: flex;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1rem;
+  color: black;
+  background: white;
+}

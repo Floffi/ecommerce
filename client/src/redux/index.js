@@ -2,6 +2,9 @@ import reduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import auth from './auth';
 import categories from './categories';
+import products from './products';
+import orders from './orders';
+import users from './users';
 import { LOGOUT_SUCCESS } from './auth';
 
 const resetEnhancer = (rootReducer) => (state, action) => {
@@ -18,6 +21,9 @@ const middlewares = [reduxThunk];
 const reducer = combineReducers({
   auth,
   categories,
+  products,
+  orders,
+  users,
 });
 
 const store = createStore(

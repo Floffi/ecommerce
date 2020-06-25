@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.create__link {
+  align-self: flex-start;
+  font-weight: 700;
+  color: white;
+  background: black;
+  border-radius: 3px;
+  padding: 1rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}

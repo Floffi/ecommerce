@@ -1,0 +1,43 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.overlay:hover {
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: white;
+  z-index: 11;
+  border-radius: 3px;
+}
+
+.icon {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

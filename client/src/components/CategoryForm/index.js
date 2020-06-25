@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { GiStack } from 'react-icons/gi';
 
 import styles from './CategoryForm.module.css';
@@ -27,8 +27,9 @@ const getCategory = async (categoryId) => {
   }
 };
 
-const CategoryForm = ({ title, buttonLabel, action }) => {
+const CategoryForm = ({ buttonLabel, action }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const { categoryId } = useParams();
   const {
     register,
@@ -44,7 +45,6 @@ const CategoryForm = ({ title, buttonLabel, action }) => {
     if (categoryId) {
       const initalizeCategory = async () => {
         const res = await getCategory(categoryId);
-        console.log(res);
         if (res.status === 'success') {
           setValue('name', res.data.category.name);
         }
@@ -59,16 +59,15 @@ const CategoryForm = ({ title, buttonLabel, action }) => {
 
   const onSubmit = (data) => {
     if (categoryId) {
-      dispatch(action(categoryId, data));
+      dispatch(action(categoryId, data, history));
     } else {
-      dispatch(action(data));
+      dispatch(action(data, history));
     }
   };
 
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <h1 className={styles.title}>{title}</h1>
         <Input
           type='text'
           name='name'
@@ -86,7 +85,6 @@ const CategoryForm = ({ title, buttonLabel, action }) => {
 };
 
 CategoryForm.propTypes = {
-  title: PropTypes.string.isRequired,
   buttonLabel: PropTypes.string.isRequired,
   callback: PropTypes.func.isRequired,
 };

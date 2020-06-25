@@ -4,3 +4,7 @@
   justify-content: center;
   height: 100%;
 }
+
+.form > *:not(:last-child) {
+  margin-bottom: 1rem;
+}

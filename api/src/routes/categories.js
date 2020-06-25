@@ -12,6 +12,7 @@ router
 router
   .route('/:category_id')
   .get(categories.getCategory)
-  .patch(categories.updateCategory);
+  .patch(categories.updateCategory)
+  .delete(categories.deleteCategory);
 
 module.exports = router;
